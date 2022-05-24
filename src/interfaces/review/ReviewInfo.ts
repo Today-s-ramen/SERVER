@@ -5,6 +5,4 @@ export interface ReviewInfo {
     rates: Number;
     packageName: string;
     product: String;
-    createAt: Date;
-    updateAt: Date;
 }
