@@ -1,3 +1,3 @@
 export interface QuantityInfo {
-    option: string;
-};
+  option: string;
+}

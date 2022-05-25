@@ -1,8 +1,8 @@
 export interface ReviewInfo {
-    userName: String;
-    thumbnail?: String;
-    description: Text;
-    rates: Number;
-    packageName: string;
-    product: String;
+  userName: string;
+  thumbnail?: string;
+  description: Text;
+  rates: number;
+  packageName: string;
+  product: string;
 }
