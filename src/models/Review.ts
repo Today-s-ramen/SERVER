@@ -7,7 +7,7 @@ const ReviewSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    thumbnanil: {
+    thumbnail: {
       type: String,
     },
     description: {
@@ -23,7 +23,7 @@ const ReviewSchema = new mongoose.Schema(
       required: true,
     },
     product: {
-      type: String,
+      type: Array,
       required: true,
     },
   },

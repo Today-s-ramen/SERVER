@@ -4,5 +4,5 @@ export interface ReviewInfo {
   description: Text;
   rates: number;
   packageName: string;
-  product: string;
+  product: string[];
 }
