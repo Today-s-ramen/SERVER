@@ -1,3 +1,5 @@
+import { PostBaseResponseDto } from '../interfaces/common/PostBaseResponseDto';
+import { ReviewCreateDto } from '../interfaces/review/ReviewCreateDto';
 import { ReviewResponseDto } from '../interfaces/review/ReviewResponseDto';
 import Review from '../models/Review';
 
@@ -28,6 +30,23 @@ const getReviewList = async (): Promise<ReviewResponseDto[] | null> => {
   }
 };
 
+const createReview = async (reviewCreateDto: ReviewCreateDto): Promise<PostBaseResponseDto> => {
+  try {
+    const review = new Review(reviewCreateDto);
+    await review.save();
+
+    const data = {
+      _id: review._id,
+    };
+
+    return data;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};
+
 export default {
   getReviewList,
+  createReview,
 };
