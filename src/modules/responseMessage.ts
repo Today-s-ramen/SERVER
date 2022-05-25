@@ -5,6 +5,7 @@ const message = {
   INTERNAL_SERVER_ERROR: '서버 내부 오류',
 
   READ_MAINPAGE_REVIEW_SUCCESS: '메인 페이지 리뷰 조회 성공',
+  READ_SUBSCRIBE_OPTION_SUCCESS: '라면 구독 옵션 조회 성공',
 };
 
 export default message;

@@ -1,4 +1,4 @@
 import ReviewController from './ReviewController';
+import SubscribeController from './SubscribeController';
 
-// controller index file
-export { ReviewController };
+export { ReviewController, SubscribeController };
