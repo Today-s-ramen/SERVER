@@ -8,4 +8,4 @@ const QuantitySchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model<QuantityInfo & mongoose.Document>('Queantity', QuantitySchema);
+export default mongoose.model<QuantityInfo & mongoose.Document>('Quantity', QuantitySchema);
