@@ -30,10 +30,10 @@ const createSubscribe = async (req: Request, res: Response) => {
     res.status(statusCode.NOT_FOUND).send(util.fail(statusCode.NOT_FOUND, message.BAD_REQUEST));
   }
 
-  const SubscribeCreateDto: SubscribeCreateDto = req.body;
+  const subscribeCreateDto: SubscribeCreateDto = req.body;
 
   try {
-    const data = await SubscribeService.createSubscribe(SubscribeCreateDto);
+    const data = await SubscribeService.createSubscribe(subscribeCreateDto);
 
     res.status(statusCode.OK).send(util.success(statusCode.OK, message.CREATE_SUBSCRIBE_SUCCESS, data));
   } catch(error) {
