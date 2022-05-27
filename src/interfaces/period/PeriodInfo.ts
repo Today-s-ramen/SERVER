@@ -1,3 +1,3 @@
 export interface PeriodInfo {
-    option: string;
+  option: string;
 }

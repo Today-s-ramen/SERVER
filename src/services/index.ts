@@ -1,3 +1,4 @@
 // service index file
-export { };
+import ReviewService from './ReviewService';
 
+export { ReviewService };

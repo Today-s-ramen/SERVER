@@ -20,6 +20,7 @@
   "rules": {
     "prettier/prettier": "error",
     "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/no-empty-interface": ["error",{ "allowSingleExtends": true }],
     "new-cap": ["error", { "capIsNew": false }],
     "no-prototype-builtins": "off",
     "no-self-assign": "off",
