@@ -6,5 +6,5 @@ export interface ReviewResponseDto {
   description: Text;
   productList: string[];
   reviewDate: string;
-  thumbnail: string;
+  thumbnail: string[];
 }
