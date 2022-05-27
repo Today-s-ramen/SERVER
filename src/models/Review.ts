@@ -8,7 +8,7 @@ const ReviewSchema = new mongoose.Schema(
       required: true,
     },
     thumbnail: {
-      type: String,
+      type: Array,
     },
     description: {
       type: String,
