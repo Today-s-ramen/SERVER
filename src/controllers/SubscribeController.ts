@@ -27,7 +27,7 @@ const getSubscribeOptions = async (req: Request, res: Response) => {
 const createSubscribe = async (req: Request, res: Response) => {
   const error = validationResult(req);
   if(!error.isEmpty()) {
-    res.status(statusCode.NOT_FOUND).send(util.fail(statusCode.NOT_FOUND, message.BAD_REQUEST));
+    res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, message.NULL_VALUE));
   }
 
   const subscribeCreateDto: SubscribeCreateDto = req.body;
