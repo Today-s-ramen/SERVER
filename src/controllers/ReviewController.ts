@@ -6,6 +6,11 @@ import statusCode from '../modules/statusCode';
 import util from '../modules/util';
 import { ReviewService } from '../services';
 
+/**
+ * @route GET /review
+ * @desc 리뷰 전체 데이터 조회
+ * @access Public
+ */
 const getReviewList = async (req: Request, res: Response): Promise<Response | void> => {
   try {
     const data = await ReviewService.getReviewList();
@@ -19,6 +24,12 @@ const getReviewList = async (req: Request, res: Response): Promise<Response | vo
   }
 };
 
+/**
+ * @route POST /review
+ * @param reviewId
+ * @desc 리뷰 등록
+ * @access Public
+ */
 const createReview = async (req: Request, res: Response): Promise<Response | void> => {
   const error = validationResult(req);
   if (!error.isEmpty()) {
@@ -42,6 +53,7 @@ const createReview = async (req: Request, res: Response): Promise<Response | voi
  * @route GET /review/:reviewId
  * @param reviewId
  * @desc 리뷰 상세페이지 조회
+ * @access Public
  */
 const findReviewById = async (req: Request, res: Response) => {
   const { reviewId } = req.params;

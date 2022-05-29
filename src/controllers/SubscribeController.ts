@@ -8,8 +8,8 @@ import { SubscribeService } from '../services';
 
 /**
  * @route GET /subscribe
- * @desc read subscribe option
- * @access public
+ * @desc 라면 구독 옵션 정보 조회
+ * @access Public
  */
 const getSubscribeOptions = async (req: Request, res: Response) => {
   try {
@@ -26,8 +26,8 @@ const getSubscribeOptions = async (req: Request, res: Response) => {
 
 /**
  * @route POST /subscribe/
- * @desc create subscribe
- * @access public
+ * @desc 라면 구독 등록
+ * @access Public
  */
 const createSubscribe = async (req: Request, res: Response) => {
   const error = validationResult(req);
