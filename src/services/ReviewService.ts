@@ -1,7 +1,7 @@
 import { PostBaseResponseDto } from '../interfaces/common/PostBaseResponseDto';
 import { ReviewCreateDto } from '../interfaces/review/ReviewCreateDto';
-import { ReviewResponseDto } from '../interfaces/review/ReviewResponseDto';
 import { ReviewDetailResponseDto } from '../interfaces/review/ReviewDetailResponseDto';
+import { ReviewResponseDto } from '../interfaces/review/ReviewResponseDto';
 import Review from '../models/Review';
 
 const getReviewList = async (): Promise<ReviewResponseDto[] | null> => {
@@ -61,15 +61,15 @@ const findReviewById = async (reviewId: string): Promise<ReviewDetailResponseDto
       rates: review.rates,
       userName: review.userName,
       imageList: review.thumbnail,
-      reviewDetail: review.description
+      reviewDetail: review.description,
     };
 
     return result;
-  } catch(error) {
+  } catch (error) {
     console.log(error);
     throw error;
   }
-}
+};
 
 export default {
   getReviewList,
