@@ -1,8 +1,8 @@
+import { PostBaseResponseDto } from '../interfaces/common/PostBaseResponseDto';
+import { SubscribeCreateDto } from '../interfaces/subscribe/SubscribeCreateDto';
 import { SubscribeOptionDto } from '../interfaces/subscribe/SubscribeOptionDto';
 import Period from '../models/Period';
 import Quantity from '../models/Quantity';
-import { SubscribeCreateDto } from '../interfaces/subscribe/SubscribeCreateDto';
-import { PostBaseResponseDto } from '../interfaces/common/PostBaseResponseDto';
 import Subscribe from '../models/Subscribe';
 
 const getSubscribeOptions = async (): Promise<SubscribeOptionDto | null> => {
@@ -28,7 +28,7 @@ const getSubscribeOptions = async (): Promise<SubscribeOptionDto | null> => {
 
 const createSubscribe = async (SubscribeCreateDto: SubscribeCreateDto): Promise<PostBaseResponseDto> => {
   try {
-    const subscribe = new Subscribe ({
+    const subscribe = new Subscribe({
       period: SubscribeCreateDto.deliveryPeriod,
       quantity: SubscribeCreateDto.deliveryQuantity,
     });
@@ -36,7 +36,7 @@ const createSubscribe = async (SubscribeCreateDto: SubscribeCreateDto): Promise<
     await subscribe.save();
 
     const data = {
-      _id: subscribe._id
+      _id: subscribe._id,
     };
 
     return data;
@@ -44,6 +44,6 @@ const createSubscribe = async (SubscribeCreateDto: SubscribeCreateDto): Promise<
     console.log(error);
     throw error;
   }
-}
+};
 
 export default { getSubscribeOptions, createSubscribe };
