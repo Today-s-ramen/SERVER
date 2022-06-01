@@ -2,6 +2,8 @@ import dotenv from 'dotenv';
 import express, { NextFunction, Request, Response } from 'express';
 import connectDB from './loaders/db';
 import routes from './routes';
+import cors from 'cors';
+import config from './config';
 const app = express();
 dotenv.config();
 
@@ -11,6 +13,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(routes);
+app.use(
+  cors({
+    credentials: true,
+    origin: [
+      'http://localhost:8000',
+      config.EC2URI
+    ],
+  })
+)
 
 // error handler
 interface ErrorType {
