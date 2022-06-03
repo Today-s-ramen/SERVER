@@ -1,7 +1,7 @@
-import { PeriodInfo } from "../period/PeriodInfo";
-import { QuantityInfo } from "../quantity/QuantityInfo";
+import { PeriodInfo } from '../period/PeriodInfo';
+import { QuantityInfo } from '../quantity/QuantityInfo';
 
 export interface SubscribeCreateDto {
-    deliveryPeriod: PeriodInfo;
-    deliveryQuantity: QuantityInfo;  
+  deliveryPeriod: PeriodInfo;
+  deliveryQuantity: QuantityInfo;
 }
