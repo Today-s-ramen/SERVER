@@ -8,11 +8,9 @@
 <img width="727" alt="스크린샷 2022-05-29 오후 4 19 57" src="https://user-images.githubusercontent.com/68772751/170856974-d5fadb96-a30c-4149-a0f9-2d6fcb817f12.png">
 <img width="727" alt="스크린샷 2022-05-29 오후 4 20 03" src="https://user-images.githubusercontent.com/68772751/170856967-128b0719-6ce5-4ef5-85c3-45071c78e23f.png">
 
-🗄
 ## 💻 API 명세 및 개발 담당 부분
 
-[👉API 명세서 바로가기](
-<img width="664" alt="스크린샷 2022-05-29 오후 4 22 58" src="https://user-images.githubusercontent.com/68772751/170857076-47016243-73a1-44aa-9bc4-e9e28d42906c.png">)
+[👉API 명세서 바로가기](https://www.notion.so/q-bit/API-25477d755ad346fea284dbd2e992480d)
 
 
 ## 🤙 코드 컨벤션
