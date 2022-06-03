@@ -25,4 +25,9 @@ export default {
    * EC2 Pulbic URI
    */
   EC2URI: process.env.EC2_PUBLIC_URI as string,
+
+  /**
+   * 클라이언트 배포 URI
+   */
+  FE_DEPLOY: process.env.FE_DEPLOY as string,
 };

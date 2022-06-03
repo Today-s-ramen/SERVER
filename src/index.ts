@@ -18,7 +18,8 @@ app.use(
     credentials: true,
     origin: [
       'http://localhost:8000',
-      config.EC2URI
+      config.EC2URI,
+      config.FE_DEPLOY
     ],
   })
 )
