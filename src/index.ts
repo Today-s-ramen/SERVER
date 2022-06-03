@@ -1,9 +1,9 @@
+import cors from 'cors';
 import dotenv from 'dotenv';
 import express, { NextFunction, Request, Response } from 'express';
+import config from './config';
 import connectDB from './loaders/db';
 import routes from './routes';
-import cors from 'cors';
-import config from './config';
 const app = express();
 dotenv.config();
 
@@ -16,13 +16,9 @@ app.use(routes);
 app.use(
   cors({
     credentials: true,
-    origin: [
-      'http://localhost:8000',
-      config.EC2URI,
-      config.FE_DEPLOY
-    ],
-  })
-)
+    origin: ['http://localhost:3000', 'http://localhost:3001', config.EC2URI, config.FE_DEPLOY],
+  }),
+);
 
 // error handler
 interface ErrorType {
